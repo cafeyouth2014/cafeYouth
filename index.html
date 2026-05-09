@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Youth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">Fun, Frndz & Gupshup</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#usp">USP</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+</header>
+
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-blur-coffee-shop-or-cafe-restaurant-interior-image_15683716.jpg"
+         alt="Cafe Background" class="hero-image">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>CAFE YOUTH</h1>
+        <p>Fun, Frndz & Gupshup</p>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn primary-btn">Explore Menu</a>
+            <a href="#contact" class="btn secondary-btn">Visit Us</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+    <div class="about-content">
+        <h2>About Cafe Youth</h2>
+        <p>Welcome to <span>Cafe Youth</span> — a place where conversations feel warmer,
+           laughter sounds louder, and every bite brings comfort.</p>
+        <p>Established in <span>2014</span> by founder <span>Amit Bansal</span>,
+           Cafe Youth was created with one simple vision: to serve food that makes
+           people happy while creating a cozy space where friends and families can
+           relax, connect, and enjoy endless gupshup.</p>
+        <p>Located in <span>Vaishali Sector 1</span>, Cafe Youth is more than just a café —
+           it's a favorite hangout destination for coffee lovers, foodies, and people who
+           simply enjoy good vibes with great food.</p>
+        <p class="quote">✨ "Where every meal starts a conversation and every flavor creates a memory."</p>
+    </div>
+    <div class="about-image">
+        <!-- ✅ FIX 1: C:\... wala path hata ke pics/ folder path diya -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBM5rRdQFk83sTWYqtgWD4mfmqFX_3OGtEQ&s" alt="Cafe Youth Interior"
+             onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80'">
+    </div>
+</section>
+
+
+<!-- ===== MENU SECTION ===== -->
+<section class="menu-section" id="menu">
+
+    <h2 class="section-title">Our Delicious Menu 🍴</h2>
+    <p class="menu-tagline">
+        From cheesy snacks and spicy Chinese to refreshing drinks and creamy shakes —
+        every item at Cafe Youth is made to turn your cravings into happiness ✨
+    </p>
+
+    <!-- TABS -->
+    <div class="menu-tabs-wrap">
+        <div class="menu-tabs" id="menuTabs">
+            <button class="menu-tab active" onclick="showMenu('noodles',this)">🍜 Noodles</button>
+            <button class="menu-tab" onclick="showMenu('rice',this)">🍚 Fried Rice</button>
+            <button class="menu-tab" onclick="showMenu('momos',this)">🥟 Momos</button>
+            <button class="menu-tab" onclick="showMenu('starters',this)">🌱 Starters</button>
+            <button class="menu-tab" onclick="showMenu('gravy',this)">🍲 Gravy</button>
+            <button class="menu-tab" onclick="showMenu('soups',this)">🥣 Soups</button>
+            <button class="menu-tab" onclick="showMenu('burgers',this)">🍔 Burgers</button>
+            <button class="menu-tab" onclick="showMenu('sandwiches',this)">🥪 Sandwiches</button>
+            <button class="menu-tab" onclick="showMenu('pastas',this)">🍝 Pastas</button>
+            <button class="menu-tab" onclick="showMenu('maggie',this)">🍝 Maggie</button>
+            <button class="menu-tab" onclick="showMenu('garlic',this)">🧄 Garlic Bread</button>
+            <button class="menu-tab" onclick="showMenu('drinks',this)">🥤 Drinks</button>
+            <button class="menu-tab" onclick="showMenu('shakes',this)">🍨 Shakes</button>
+        </div>
+    </div>
+
+    <!-- NOODLES -->
+    <div class="menu-panel active" id="noodles">
+        <div class="menu-strip">
+            <div class="strip-img">
+                <img src="pics/noodle.png" alt="Noodles"
+                     onerror="this.src='https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=300&q=80'">
+            </div>
+            <div class="strip-content">
+                <h3>🍜 Noodles</h3>
+                <div class="strip-item"><span class="item-name">Hakka Noodles</span><div class="prices"><span class="veg">Veg ₹130</span><span class="nonveg">Non Veg ₹150</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Garlic Noodles</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Singapuri Noodles</span><div class="prices"><span class="veg">Veg ₹160</span><span class="nonveg">Non Veg ₹180</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Noodles</span><div class="prices"><span class="veg">Veg ₹170</span><span class="nonveg">Non Veg ₹180</span></div></div>
+                <div class="strip-item"><span class="item-name">Schezwan Noodles</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Paneer Noodles</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Chef Special Noodles</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Cafe Youth Special</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Youth Ishtyle Noodles</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹150</span></div></div>
+                <div class="strip-item"><span class="item-name">Red Chilli Spring Onion Brown Garlic Noodles</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Egg Noodles</span><div class="prices"><span class="veg">Veg ₹160</span><span class="nonveg">Non Veg ₹180</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FRIED RICE -->
+    <div class="menu-panel" id="rice">
+        <div class="menu-strip">
+            <div class="strip-img">
+                <img src="pics/fried rice.png" alt="Fried Rice"
+                     onerror="this.src='https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300&q=80'">
+            </div>
+            <div class="strip-content">
+                <h3>🍚 Fried Rice</h3>
+                <div class="strip-item"><span class="item-name">Fried Rice</span><div class="prices"><span class="veg">Veg ₹130</span><span class="nonveg">Non Veg ₹150</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Garlic Fried Rice</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Paneer Fried Rice</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Chef Special Rice</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Schezwan Rice</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Cafe Youth Special Rice</span><div class="prices"><span class="veg">Veg ₹150</span><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Fried Rice</span><div class="prices"><span class="veg">Veg ₹170</span><span class="nonveg">Non Veg ₹180</span></div></div>
+                <div class="strip-item"><span class="item-name">Brown Garlic Rice</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Egg Rice</span><div class="prices"><span class="veg">Veg ₹160</span><span class="nonveg">Non Veg ₹170</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOMOS -->
+    <div class="menu-panel" id="momos">
+        <div class="menu-strip">
+            <div class="strip-img">
+                <img src="pics/momos.png" alt="Momos"
+                     onerror="this.src='https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&q=80'">
+            </div>
+            <div class="strip-content">
+                <h3>🥟 Momos</h3>
+                <div class="strip-item"><span class="item-name">Momos (Steamed)</span><div class="prices"><span class="veg">Veg ₹80</span><span class="nonveg">Non Veg ₹100</span></div></div>
+                <div class="strip-item"><span class="item-name">Momos Fried</span><div class="prices"><span class="veg">Veg ₹100</span><span class="nonveg">Non Veg ₹120</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Momos</span><div class="prices"><span class="veg">Veg ₹120</span><span class="nonveg">Non Veg ₹140</span></div></div>
+                <div class="strip-item"><span class="item-name">Special Momos</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Pizza Momos</span><div class="prices"><span class="veg">Veg ₹180</span><span class="nonveg">Non Veg ₹200</span></div></div>
+                <div class="strip-item"><span class="item-name">Kurkure Momos</span><div class="prices"><span class="veg">Veg ₹140</span><span class="nonveg">Non Veg ₹160</span></div></div>
+                <div class="strip-item"><span class="item-name">Creamy Momos</span><div class="prices"><span class="veg">Veg ₹160</span><span class="nonveg">Non Veg ₹180</span></div></div>
+                <div class="strip-item"><span class="item-name">Honey Chilli Momos</span><div class="prices"><span class="veg">Veg ₹180</span><span class="nonveg">Non Veg ₹200</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STARTERS -->
+    <div class="menu-panel" id="starters">
+        <p class="sub-heading">🌱 Veg Starters</p>
+        <div class="menu-strip">
+            <div class="strip-img">
+                <!-- ✅ FIX 2: C:\... wala path hata ke pics/ folder path diya -->
+                <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_960,w_960//InstamartAssets/1/Chilli_Mushrooms.webp" alt="Veg Starters"
+                     onerror="this.src='https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&q=80'">
+            </div>
+            <div class="strip-content">
+                <h3>🌱 Veg Starters</h3>
+                <div class="strip-item"><span class="item-name">Chilli Mushroom</span><div class="prices"><span class="veg">Veg ₹220</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Chaap</span><div class="prices"><span class="veg">Veg ₹180</span></div></div>
+                <div class="strip-item"><span class="item-name">Veg Spring Roll</span><div class="prices"><span class="veg">Veg ₹140</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Potato</span><div class="prices"><span class="veg">Veg ₹130</span></div></div>
+                <div class="strip-item"><span class="item-name">Honey Chilli Potato</span><div class="prices"><span class="veg">Veg ₹150</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Chaap</span><div class="prices"><span class="veg">Veg ₹200</span></div></div>
+                <div class="strip-item"><span class="item-name">Paneer Schezwan</span><div class="prices"><span class="veg">Veg ₹220</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Paneer</span><div class="prices"><span class="veg">Veg ₹260</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Paneer</span><div class="prices"><span class="veg">Veg ₹220</span></div></div>
+                <div class="strip-item"><span class="item-name">Veg Manchurian Dry</span><div class="prices"><span class="veg">Veg ₹240</span></div></div>
+                <div class="strip-item"><span class="item-name">Crispy Fried Corn</span><div class="prices"><span class="veg">Veg ₹180</span></div></div>
+            </div>
+        </div>
+        <p class="sub-heading">🍗 Non Veg Starters</p>
+        <div class="menu-strip">
+            <div class="strip-img">
+                <!-- ✅ FIX 3: quotes add kiye src mein -->
+                <img src="https://www.easycookingwithmolly.com/wp-content/uploads/2021/04/easy-indian-chilli-chicken-recipe-dry.jpg" alt="Non Veg Starters"
+                     onerror="this.src='https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300&q=80'">
+            </div>
+            <div class="strip-content">
+                <h3>🍗 Non Veg Starters</h3>
+                <div class="strip-item"><span class="item-name">Chicken Spring Roll</span><div class="prices"><span class="nonveg">Non Veg ₹170</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Paneer Salt</span><div class="prices"><span class="nonveg">Non Veg ₹300</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹320</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Manchurian</span><div class="prices"><span class="nonveg">Non Veg ₹280</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹300</span></div></div>
+                <div class="strip-item"><span class="item-name">Ginger Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹320</span></div></div>
+                <div class="strip-item"><span class="item-name">Honey Chilli Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹360</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Schezwan</span><div class="prices"><span class="nonveg">Non Veg ₹360</span></div></div>
+                <div class="strip-item"><span class="item-name">Drum Sticks</span><div class="prices"><span class="nonveg">Non Veg ₹360</span></div></div>
+                <div class="strip-item"><span class="item-name">Lolly Pop</span><div class="prices"><span class="nonveg">Non Veg ₹340</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAVY -->
+    <div class="menu-panel" id="gravy">
+        <p class="sub-heading">🍲 Veg Gravy</p>
+        <div class="menu-strip">
+            <div class="strip-img">
+                <!-- ✅ FIX 4: quotes add kiye src mein -->
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTAul1tsJxowT8on2fPDxXLIDxOYtVpbBLnRZlK6VSgI8hfSz6q" alt="Veg Gravy">
+            </div>
+            <div class="strip-content">
+                <h3>🍲 Veg Gravy</h3>
+                <div class="strip-item"><span class="item-name">Exotic Paneer Gravy</span><div class="prices"><span class="veg">Veg ₹240</span></div></div>
+                <div class="strip-item"><span class="item-name">Veg Manchurian</span><div class="prices"><span class="veg">Veg ₹200</span></div></div>
+                <div class="strip-item"><span class="item-name">Paneer Schezwan</span><div class="prices"><span class="veg">Veg ₹260</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Paneer</span><div class="prices"><span class="veg">Veg ₹220</span></div></div>
+                <div class="strip-item"><span class="item-name">Paneer Manchurian</span><div class="prices"><span class="veg">Veg ₹220</span></div></div>
+            </div>
+        </div>
+        <p class="sub-heading">🍖 Non Veg Gravy</p>
+        <div class="menu-strip">
+            <div class="strip-img">
+                <!-- ✅ FIX 5: quotes add kiye src mein -->
+                <img src="https://pupswithchopsticks.com/wp-content/uploads/chicken-manchurian-tnnew.webp" alt="Non Veg Gravy">
+            </div>
+            <div class="strip-content">
+                <h3>🍖 Non Veg Gravy</h3>
+                <div class="strip-item"><span class="item-name">Chicken Manchurian</span><div class="prices"><span class="nonveg">Non Veg ₹300</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Hot Garlic</span><div class="prices"><span class="nonveg">Non Veg ₹320</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Schezwan</span><div class="prices"><span class="nonveg">Non Veg ₹320</span></div></div>
+                <div class="strip-item"><span class="item-name">Chilli Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹340</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Hong Kong</span><div class="prices"><span class="nonveg">Non Veg ₹340</span></div></div>
+                <div class="strip-item"><span class="item-name">Chicken Sweet & Sour</span><div class="prices"><span class="nonveg">Non Veg ₹360</span></div></div>
+                <div class="strip-item"><span class="item-name">Exotic Chicken</span><div class="prices"><span class="nonveg">Non Veg ₹360</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOUPS -->
+    <div class="menu-panel" id="soups">
+        <div class="menu-strip">
+            <div class="strip-img">
+                <!-- ✅ FIX 6: quotes add kiye src mein -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmxdHZc2mtzSdsj5XzYdAvJsgG_bdyZhVpCw&s" alt="Soups">
+            </div>
+            <div class="strip-content">
+                <h3>🥣 Soups</h3>
+                <div class="strip-item"><span class="item-name">Sweet Corn Soup</span><div class="prices"><span class="veg">Veg ₹80</span><span class="nonveg">Non Veg ₹100</span></div></div>
+                <div class="strip-item"><span class="item-name">Hot & Sour Soup</span><div class="prices"><span class="veg">Veg ₹90</span><span class="nonveg">Non Veg ₹110</span></div></div>
+                <div class="strip-item"><span class="item-name">Manchow Soup</span><div class="prices"><span class="veg">Veg ₹80</span><span class="nonveg">Non Veg ₹100</span></div></div>
+                <div class="strip-item"><span class="item-name">Thupka Soup</span><div class="prices"><span class="veg">Veg ₹90</span><span class="nonveg">Non Veg ₹110</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BURGERS -->
+<div class="menu-panel" id="burgers">
+    <div class="menu-card">
+
+        <img src="https://www.recipetineats.com/tachyon/2022/08/Stack-of-cheeseburgers.jpg" alt="Burgers">
+
+        <div class="menu-card-content">
+            <h3>🍔 Burgers</h3>
+
+            <div class="menu-item">
+                <span>Veggie Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹60</span>
+                    <span class="nonveg">Non Veg ₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Veggie Cheese Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹70</span>
+                    <span class="nonveg">Non Veg ₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Corn Cheese Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹80</span>
+                    <span class="nonveg">Non Veg ₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Spicy Mexican Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹70</span>
+                    <span class="nonveg">Non Veg ₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Double Cheese Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹80</span>
+                    <span class="nonveg">Non Veg ₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Paneer Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹90</span>
+                    <span class="nonveg">Non Veg ₹110</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Deluxe Veggie Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹90</span>
+                    <span class="nonveg">Non Veg ₹110</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cafe Youth Special Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹70</span>
+                    <span class="nonveg">Non Veg ₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Spicy Indian Burger</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹70</span>
+                    <span class="nonveg">Non Veg ₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Shami Kebab Burger</span>
+                <div class="prices">
+                    <span class="nonveg">₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Seekh Kebab Burger</span>
+                <div class="prices">
+                    <span class="nonveg">₹90</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- SANDWICHES -->
+<div class="menu-panel" id="sandwiches">
+    <div class="menu-card">
+
+        <img src="https://shwetainthekitchen.com/wp-content/uploads/2020/08/IMG_9973.jpg" alt="Sandwiches">
+
+        <div class="menu-card-content">
+            <h3>🥪 Grilled Sandwiches</h3>
+
+            <div class="menu-item">
+                <span>Fresh Salad Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹80</span>
+                    <span class="nonveg">Non Veg ₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Fresh Salad Cheese Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹90</span>
+                    <span class="nonveg">Non Veg ₹110</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Continental Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹80</span>
+                    <span class="nonveg">Non Veg ₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cheese Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹90</span>
+                    <span class="nonveg">Non Veg ₹110</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Paneer Tikka Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹110</span>
+                    <span class="nonveg">Non Veg ₹130</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cafe Youth Special Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹110</span>
+                    <span class="nonveg">Non Veg ₹130</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Spicy Indian Sandwich</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹100</span>
+                    <span class="nonveg">Non Veg ₹120</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- PASTAS -->
+<div class="menu-panel" id="pastas">
+    <div class="menu-card">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjsTO6COpFCYVqt1lnwtDAyimwaqP47hyf4w&s" alt="Pastas">
+
+        <div class="menu-card-content">
+            <h3>🍝 Pastas</h3>
+
+            <div class="menu-item">
+                <span>Arrabiata Tangy Pasta</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹150</span>
+                    <span class="nonveg">Non Veg ₹170</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Alfredo Creamy Pasta</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹180</span>
+                    <span class="nonveg">Non Veg ₹200</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Mix & Match</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹200</span>
+                    <span class="nonveg">Non Veg ₹220</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cafe Youth Special</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹220</span>
+                    <span class="nonveg">Non Veg ₹240</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- MAGGIE -->
+<div class="menu-panel" id="maggie">
+    <div class="menu-card">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqbLLa4RQlwwEH8I_OnDL1i5WmKOarbAFuCQ&s" alt="Maggie">
+
+        <div class="menu-card-content">
+            <h3>🍝 Maggie</h3>
+
+            <div class="menu-item">
+                <span>Continental Maggie</span>
+                <div class="prices">
+                    <span class="veg">₹70</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Tikka Tandoori Maggie</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Mexican Maggie</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cheese Maggie</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Spicy Indian Maggie</span>
+                <div class="prices">
+                    <span class="veg">₹70</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- GARLIC BREAD -->
+<div class="menu-panel" id="garlic">
+    <div class="menu-card">
+
+        <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/classic_garlic_bread_84954_16x9.jpg" alt="Garlic Bread">
+
+        <div class="menu-card-content">
+            <h3>🧄 Garlic Breads</h3>
+
+            <div class="menu-item">
+                <span>Classic Garlic Bread</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cheese Garlic Bread</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹100</span>
+                    <span class="nonveg">Non Veg ₹120</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Supreme Garlic Bread</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹120</span>
+                    <span class="nonveg">Non Veg ₹140</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Exotic Garlic Bread</span>
+                <div class="prices">
+                    <span class="veg">Veg ₹120</span>
+                    <span class="nonveg">Non Veg ₹140</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>French Fry</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- DRINKS -->
+<div class="menu-panel" id="drinks">
+    <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&q=80" alt="Quenchers">
+
+        <div class="menu-card-content">
+            <h3>🥤 Quenchers</h3>
+
+            <div class="menu-item">
+                <span>Fresh Lime Soda</span>
+                <div class="prices">
+                    <span class="veg">₹50</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Lassi Sweet / Salty</span>
+                <div class="prices">
+                    <span class="veg">₹50</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Fruit Beer</span>
+                <div class="prices">
+                    <span class="veg">₹70</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Mojito</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cold Coffee Frappe</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cold Coffee with Ice Cream</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Mocha Chino</span>
+                <div class="prices">
+                    <span class="veg">₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Iced Esking</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Chocolate Coffee</span>
+                <div class="prices">
+                    <span class="veg">₹90</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Cafeteria Coffee</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- SHAKES -->
+<div class="menu-panel" id="shakes">
+    <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&q=80" alt="Shakes">
+
+        <div class="menu-card-content">
+            <h3>🍨 Ice Cream Shakes</h3>
+
+            <div class="menu-item">
+                <span>Milky Way</span>
+                <div class="prices">
+                    <span class="veg">₹70</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Strawberry Shake</span>
+                <div class="prices">
+                    <span class="veg">₹70</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Chocolate Shake</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Rookie Cookie Shake</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Mocha Shake</span>
+                <div class="prices">
+                    <span class="veg">₹80</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Vanilla Oreo Shake</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>Chocolate Oreo Shake</span>
+                <div class="prices">
+                    <span class="veg">₹100</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<!-- ===== USP ===== -->
+<section class="usp-section" id="usp">
+    <h2 class="section-title">Why People Love Us ❤️</h2>
+    <div class="usp-container">
+        <div class="usp-card">
+            <h3>✨ Overwhelming Chinese</h3>
+            <p>Perfect place for your Chinese craving.</p>
+        </div>
+        <div class="usp-card">
+            <h3>🍕 Delicious Food</h3>
+            <p>Freshly prepared meals packed with flavor and love.</p>
+        </div>
+        <div class="usp-card">
+            <h3>☕ Refreshing Drinks</h3>
+            <p>From cold coffee to mojitos — every sip feels refreshing.</p>
+        </div>
+        <div class="usp-card">
+            <h3>💫 Youth Vibes</h3>
+            <p>A perfect hangout spot for friends and food lovers.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>📞 +91 9711221953 &nbsp;|&nbsp; +91 9711988487</p>
+        <p>📧 cafeyouth@gmail.com</p>
+        <p>📍 LG6-LSCI, Tirupati Complex, Vaishali Sector 1, Ghaziabad</p>
+        <p>🕒 Open Everyday: 11 AM – 11 PM</p>
+    </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>© 2026 Cafe Youth | Good Food • Great Vibes • Endless Gupshup</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
