@@ -25,3 +25,13 @@ window.addEventListener('scroll', () => {
             ? '#e8843a' : '';
     });
 });
+
+// Price Update: <=150 pe +20, >150 pe +30
+document.querySelectorAll('.prices span, .menu-item .prices span').forEach(el => {
+  const match = el.textContent.match(/₹(\d+)/);
+  if (match) {
+    const oldPrice = parseInt(match[1]);
+    const newPrice = oldPrice <= 150 ? oldPrice + 20 : oldPrice + 30;
+    el.textContent = el.textContent.replace(/₹\d+/, '₹' + newPrice);
+  }
+});
